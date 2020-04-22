@@ -1,13 +1,14 @@
 echo ''
 echo 'This script will remove the GitHub default labels and create the Array Digital process labels for your repo. A personal access token is required to access private repos.'
 
-echo ''
-echo -n 'GitHub Personal Access Token: '
-read -s TOKEN
-
-echo ''
-echo -n 'GitHub Org/Repo (e.g. foo/bar): '
-read REPO
+# echo ''
+# echo -n 'GitHub Personal Access Token: '
+# read -s TOKEN
+TOKEN=""
+REPO="at-cuongtran/a_maze_ing"
+# echo ''
+# echo -n 'GitHub Org/Repo without https://github.com (e.g. foo/bar): '
+# read REPO
 
 REPO_USER=$(echo "$REPO" | cut -f1 -d /)
 REPO_NAME=$(echo "$REPO" | cut -f2 -d /)
